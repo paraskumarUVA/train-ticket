@@ -10,7 +10,8 @@ spring:
   application:
     name: ts-order-other-service
   datasource:
-    url: jdbc:mysql://ts-order-other-mysql:3306/ts-order-other-mysql
+#    url: jdbc:mysql://10.176.122.80:32002/ts-order-other-mysql?useSSL=false
+    url: jdbc:mysql://ts-order-other-mysql:3306/ts-order-other-mysql?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver

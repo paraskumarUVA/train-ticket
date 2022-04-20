@@ -9,7 +9,8 @@ spring:
   application:
     name: ts-station-food-service
   datasource:
-    url: jdbc:mysql://ts-station-food-mysql:3306/ts-station-food-mysql
+#    url: jdbc:mysql://10.176.122.80:32005/ts-station-food-mysql?useSSL=false
+    url: jdbc:mysql://ts-station-food-mysql:3306/ts-station-food-mysql?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver

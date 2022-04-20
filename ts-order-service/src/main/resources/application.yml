@@ -11,7 +11,8 @@ spring:
   application:
     name: ts-order-service
   datasource:
-    url: jdbc:mysql://ts-order-mysql:3306/ts-order-mysql
+#    url: jdbc:mysql://10.176.122.80:32001/ts-order-mysql?useSSL=false
+    url: jdbc:mysql://ts-order-mysql:3306/ts-order-mysql?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
