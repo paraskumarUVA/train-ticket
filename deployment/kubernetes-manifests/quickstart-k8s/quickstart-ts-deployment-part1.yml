@@ -203,23 +203,28 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ts-station-mongo
+  name: ts-station-mysql
 spec:
   selector:
     matchLabels:
-      app: ts-station-mongo
+      app: ts-station-mysql
   replicas: 1
   template:
     metadata:
       labels:
-        app: ts-station-mongo
+        app: ts-station-mysql
     spec:
       containers:
-        - name: ts-station-mongo
-          image: mongo
+        - name: ts-station-mysql
+          image: mysql:5.7
           imagePullPolicy: IfNotPresent
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: root
+            - name: MYSQL_DATABASE
+              value: ts-station-mysql
           ports:
-            - containerPort: 27017
+            - containerPort: 3306
           resources:
             requests:
               cpu: 50m
@@ -866,12 +871,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ts-station-mongo
+  name: ts-station-mysql
 spec:
   ports:
-    - port: 27017
+    - port: 3306
   selector:
-    app: ts-station-mongo
+    app: ts-station-mysql
 
 ---
 
