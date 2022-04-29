@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Response deleteByUserId(UUID userId, HttpHeaders headers) {
+    public Response deleteByUserId(String userId, HttpHeaders headers) {
         LOGGER.info("[deleteByUserId][DELETE USER][user id: {}]", userId);
         userRepository.deleteByUserId(userId);
         return new Response(1, "DELETE USER SUCCESS", null);
