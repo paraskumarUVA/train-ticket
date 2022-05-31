@@ -128,6 +128,12 @@
             <artifactId>apm-toolkit-logback-1.x</artifactId>
             <version>8.6.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>7.0.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <!--<repositories>-->
