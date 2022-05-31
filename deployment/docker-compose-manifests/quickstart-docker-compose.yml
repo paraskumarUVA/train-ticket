@@ -457,6 +457,11 @@ services:
     networks:
       - my-network
 
+  ts-notification-mongo:
+    image: mongo
+    networks:
+      - my-network
+
   ts-admin-basic-info-service:
     image: ${NAMESPACE}/ts-admin-basic-info-service:${TAG}
     restart: always
